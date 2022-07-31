@@ -31,4 +31,14 @@ export class UserService {
   deleteUser(id: number):Observable<User> {
     return this.httpClient.delete<User>(`${this.apiUrl}/id/${id}`);
   }
+
+  // Edita o usuario do banco UPDATE
+  updateUser(id: number, user: User):Observable<User> {
+    return this.httpClient.put<User>(`${this.apiUrl}/id/${id}`, user, this.httpOptions)
+  }
+
+  // Lista usuario unico
+  getUser(id:number):Observable<User[]> {
+    return this.httpClient.get<User[]>(`${this.apiUrl}/id/${id}`);
+  }
 }
