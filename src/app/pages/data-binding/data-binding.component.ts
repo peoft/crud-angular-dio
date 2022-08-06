@@ -13,6 +13,9 @@ export class DataBindingComponent implements OnInit {
   buttonText:string = 'Clique aqui';
   //textRed:boolean = false;
   textRed:string  = 'text-red';
+  bgColor:string = 'green';
+  fontSize:string = '20px';
+  widthImg:number = 600;
 
   constructor() { }
 
