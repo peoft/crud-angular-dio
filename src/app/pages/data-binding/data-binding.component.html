@@ -12,3 +12,9 @@
 
 <input type="text" class = "fom-control" [(ngModel)]="textInput">
 <p class="text-default">{{textInput}}</p>
+
+<!--<app-button></app-button>-->
+<app-button [btnText]="'Cancelar'" [btnType]="'btn-danger'"></app-button>
+<app-button [btnText]="'Salvar'" [btnType]="'btn-success'"></app-button>
+<app-button btnText='Clique aqui' [btnType]="'btn-primary'"></app-button>
+<app-button btnText='teste' [btnType]="'btn-default'"></app-button>
