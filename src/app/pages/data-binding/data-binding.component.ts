@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -9,6 +10,9 @@ export class DataBindingComponent implements OnInit {
   text:string = 'Paulo Eduardo';
   imageUrl:string = 'https://picsum.photos/300/300';
   imageDesc:string = 'Isso é uma imagem';
+  buttonText:string = 'Clique aqui';
+  //textRed:boolean = false;
+  textRed:string  = 'text-red';
 
   constructor() { }
 
@@ -16,7 +20,8 @@ export class DataBindingComponent implements OnInit {
   }
 
   clicou(value:any) {
-    this.text = 'Cristina Fischer'
+    //class binding
+    //this.textRed = true;
     console.log('clicou aqui ', value);
   }
 } 
