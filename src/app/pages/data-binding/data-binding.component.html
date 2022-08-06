@@ -14,7 +14,9 @@
 <p class="text-default">{{textInput}}</p>
 
 <!--<app-button></app-button>-->
-<app-button [btnText]="'Cancelar'" [btnType]="'btn-danger'"></app-button>
+<app-button [btnText]="'Cancelar'" [btnType]="'btn-danger'" (click)="destroiComponente()"></app-button>
 <app-button [btnText]="'Salvar'" [btnType]="'btn-success'"></app-button>
-<app-button btnText='Clique aqui' [btnType]="'btn-primary'"></app-button>
+<app-button btnText='Clique aqui' [btnType]="'btn-primary'" (click)="incrementa()"></app-button>
 <app-button btnText='teste' [btnType]="'btn-default'" (clickChildren)="clicouNoFilho($event)"></app-button>
+
+<app-life-cycle [number]="number" *ngIf="!destroi"></app-life-cycle>
