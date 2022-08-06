@@ -9,3 +9,6 @@
 <input #input (keyup) = "clicou(input.value)">
 
 {{ input.value }}
+
+<input type="text" class = "fom-control" [(ngModel)]="textInput">
+<p class="text-default">{{textInput}}</p>
