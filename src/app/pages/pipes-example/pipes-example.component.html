@@ -1,6 +1,8 @@
 <div class="form-group">
     <label for="number">Number:</label>
-    <input type="text" [(ngModel)]="text" class="form-control" id="number">
+    <input type="text" [(ngModel)]="number" class="form-control" id="number">
+    <p>{{number}}</p>
+    <button class="btn btn-success" (click)="mudaValor()">Click</button>
 </div>
 
 <div class="">

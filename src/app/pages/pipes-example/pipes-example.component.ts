@@ -22,4 +22,8 @@ export class PipesExampleComponent implements OnInit {
     this.text = this.upperCasePipe.transform(this.text);
   }
 
+  mudaValor() {
+    this.number = 123456789;    
+  }
+
 }
