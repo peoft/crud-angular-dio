@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit } from '@angular/core';
+import { last } from 'rxjs';
 import { Todo } from 'src/app/models/todo';
 
 @Component({
@@ -30,10 +31,22 @@ export class TodoListComponent implements OnInit {
     };    
   }
 
+  getLastId():number {
+    let lastId: number = 0;
+    let item:number = 0;
+
+    for (item = 0; item < this.todos.length; item++) {
+      if (this.todos[item].id > lastId) {
+        lastId = this.todos[item].id;
+      }
+    }
+    return lastId;
+  }
+
   addTodo(title: string) {
     console.log(title);
     this.clear();
-    this.todo.id = this.todos.length + 1;
+    this.todo.id = this.getLastId() + 1;
     this.todo.title = title;
     this.todos.push(this.todo);
     console.log(this.todos);
