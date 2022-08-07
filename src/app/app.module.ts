@@ -20,6 +20,7 @@ import { TodoItemComponent } from './pages/todo/todo-item/todo-item.component';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { PipesExampleComponent } from './pages/pipes-example/pipes-example.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { MatIconModule } from '@angular/material/icon';
     ButtonComponent,
     LifeCycleComponent,
     TodoListComponent,
-    TodoItemComponent
+    TodoItemComponent,
+    PipesExampleComponent
   ],
   imports: [
     BrowserModule,
