@@ -8,7 +8,13 @@
     <p>{{ number | number }}</p>
 
     <p>Resultado com formatacao</p>
-    <p>{{ number | number:'2.0-1' }}</p>
+    <p>{{ number | number:'2.0-1':'pt-BR' }}</p>
 
-    <p>{{ text }}</p>
+    <p>Resultado em moeda</p>
+    <p>{{ number | currency: 'BRL' }}</p>
+
+    <p>Resultado em porcentagemp>
+    <p>{{ number | percent }}</p>
+
+    <p>{{ text | titlecase}}</p>
 </div>
